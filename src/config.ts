@@ -14,7 +14,7 @@ export const defaultOptions = {
 export const videoServicesConfig: IVideoService[] = [
     {
         id: 'youtube',
-        embedUrl: (videoId: string) => `https://www.youtube.com/embed/${videoId}`,
+        embedUrl: (videoId: string) => `https://www.youtube.com/embed/${videoId}?autoplay=1`,
         urlProcessing: youtubeUrl
     },
     {

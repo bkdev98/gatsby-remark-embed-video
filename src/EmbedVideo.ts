@@ -29,7 +29,7 @@ function readVideoId(type: string, id: string): IVideoId {
     } catch (e){
       videoId = {};
     }
-    
+
     if (Object.keys(videoId).length !== 0) {
       return videoId as IVideoId;
     }
@@ -60,12 +60,13 @@ function createUrl(videoId: string, videoService:IVideoService, options: IEmbedV
 function createIframe(url: string, videoService:IVideoService, options: IEmbedVideoOptions) {
   let iframeNode = `
         <div class="embedVideo-container">
-            <iframe 
-              width="${options.width}" 
-              height="${options.height}" 
+            <iframe
+              width="${options.width}"
+              height="${options.height}"
               src="${url}"
-              class="embedVideo-iframe" 
+              class="embedVideo-iframe"
               allowfullscreen
+              allow='autoplay'
             ></iframe>
         </div>`
   if (options.noIframeBorder) {
