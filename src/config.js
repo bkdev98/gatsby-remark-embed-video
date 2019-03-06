@@ -16,7 +16,7 @@ exports.defaultOptions = {
 exports.videoServicesConfig = [
     {
         id: 'youtube',
-        embedUrl: (videoId) => `https://www.youtube.com/embed/${videoId}?autoplay=1`,
+        embedUrl: (videoId) => `https://www.youtube.com/embed/${videoId}`,
         urlProcessing: youtube_1.youtubeUrl
     },
     {
